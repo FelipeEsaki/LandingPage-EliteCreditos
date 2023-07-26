@@ -1,0 +1,168 @@
+.form {
+    margin: 70px 0;
+
+    position: fixed;
+    left: 55%;
+
+    background-color: $white-color;
+    border-radius: 30px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+    &-all {
+        padding: 30px 30px;
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            font-size: .8rem;
+            font-weight: 500;
+
+            .nome {
+                @include flexDirection (column, 5px);
+            }
+
+            .email_celular {
+                @include flexDirection (row, 5px);
+
+                .email {
+                    @include flexDirection (column, 0);
+                }
+
+                .celular {
+                    @include flexDirection (column, 0);
+                }
+            }
+
+            .cidade_uf {
+                @include flexDirection (row, 5px);
+
+                .cidade {
+                    width: 70%;
+                    @include flexDirection (column, 0);
+                }
+
+                .uf {
+                    width: 30%;
+                    @include flexDirection (column, 0);
+                }
+            }
+
+            .valor {
+                @include flexDirection (column, 5px)
+            }
+
+            .prazo {
+                @include flexDirection (column, 5px)
+            }
+
+            .comentario {
+                @include flexDirection (column, 5px)
+            }
+
+            .form__content__input {
+                border-radius: 10px;
+                border: 1px solid;
+                padding: 5px 10px;
+            }
+
+            #form_button {
+                cursor: pointer;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 10px;
+                background-color: $primary-color;
+                border: 0;
+                border-radius: 10px;
+                color: $text-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .form {
+        margin: 0px ;
+    
+        position: relative;
+        left: 0;
+
+        background-color: $white-color;
+        border-radius: 30px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    
+        &-all {
+            padding: 15px 15px;
+    
+            &-content {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+    
+                font-size: .6rem;
+                font-weight: 500;
+    
+                .nome {
+                    @include flexDirection (column, 5px);
+                }
+    
+                .email_celular {
+                    @include flexDirection (row, 5px);
+    
+                    .email {
+                        @include flexDirection (column, 0);
+                    }
+    
+                    .celular {
+                        @include flexDirection (column, 0);
+                    }
+                }
+    
+                .cidade_uf {
+                    @include flexDirection (row, 5px);
+    
+                    .cidade {
+                        width: 70%;
+                        @include flexDirection (column, 0);
+                    }
+    
+                    .uf {
+                        width: 30%;
+                        @include flexDirection (column, 0);
+                    }
+                }
+    
+                .valor {
+                    @include flexDirection (column, 5px)
+                }
+    
+                .prazo {
+                    @include flexDirection (column, 5px)
+                }
+    
+                .comentario {
+                    @include flexDirection (column, 5px)
+                }
+    
+                .form__content__input {
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 2px 5px;
+                }
+    
+                #form_button {
+                    cursor: pointer;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 5px;
+                    background-color: $primary-color;
+                    border: 0;
+                    border-radius: 10px;
+                    color: $black-color;
+                }
+            }
+        }
+    }
+}

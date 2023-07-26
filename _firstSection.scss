@@ -1,0 +1,120 @@
+.first-section {
+    background-image: url(img/empreendedor-masculino-usando-tablet-digital-enquanto-esta-sentado-na-escada.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    &-all {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 100px 0;
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 47%;
+
+            #logo {
+                width: 200px;
+            }
+
+            h1 {
+                font-size: 2.1rem;
+                font-weight: 700;
+                color: $white-color;
+
+                span {
+                    color: $primary-color;
+                }
+            }
+
+            p {
+                @include pText;
+                color: $white-color;
+            }
+
+            a {
+                width: 250px;
+                padding: 10px;
+
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+
+                font-size: .8rem;
+                font-weight: 600;
+                border-radius: 10px;
+                color: $white-color;
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .first-section {
+        background-image: url(img/empreendedor-masculino-usando-tablet-digital-enquanto-esta-sentado-na-escada.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    
+        &-all {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 75px;
+    
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 0px 0;
+            padding-top: 30px;
+    
+            &-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                max-width: 100%;
+    
+                #logo {
+                    width: 150px;
+                }
+    
+                h1 {
+                    @include h1Textmobile;
+    
+                    span {
+                        color: $primary-color;
+                    }
+                }
+    
+                p {
+                    @include pTextmobile;
+                    font-size: .7rem;
+                    color: $white-color;
+                }
+    
+                a {
+                    display: none;
+                    width: 150px;
+                    padding: 10px;
+    
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    text-align: center;
+    
+                    font-size: .5rem;
+                    font-weight: 600;
+                    border-radius: 10px;
+                    color: $white-color;
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}

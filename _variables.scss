@@ -1,0 +1,89 @@
+$white-color: #fff;
+$black-color: #000;
+$primary-color: #FF732B;
+$secondary-color: #0C538E;
+$text-color: #4d4d4d;
+
+@mixin flexDirection ($direction, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap; 
+}
+
+@mixin maxWidthSection {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px 0;
+}
+
+@mixin maxWidthContent {
+    margin: 10px 0;
+    max-width: 500px;
+    text-align: center;
+}
+
+@mixin h1Text  {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+@mixin h2Text {
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: $primary-color;
+    font-weight: 800;
+}
+
+@mixin h3Text {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+@mixin pText {
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: justify;
+    color: $text-color;
+}
+
+/*Mobile*/
+
+@mixin maxWidthSectionMobile {
+    max-width: 80%;
+    margin: 30px auto;
+    padding: 20px 0;
+}
+
+@mixin maxWidthContentMobile {
+    margin: 10px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+@mixin h1Textmobile  {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+@mixin h2Textmobile {
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: $primary-color;
+    font-weight: 800;
+}
+
+@mixin h3Textmobile {
+    font-size: .8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+@mixin pTextmobile {
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: justify;
+    color: $text-color;
+}

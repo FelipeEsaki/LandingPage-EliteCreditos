@@ -1,0 +1,96 @@
+.third-section {
+    max-width: 100%;
+    background-color: #f1f1f1;
+
+    &-all {
+        @include maxWidthSection;
+
+        &-content{
+            @include maxWidthContent;
+            @include flexDirection (column, 20px);
+
+            h1 {
+                @include h1Text;
+            }
+    
+            p {
+                @include pText;
+            }
+    
+            h3 {
+                @include h3Text;
+            }
+
+            &-products {
+                display: flex;
+                
+                &-ul {
+                    @include flexDirection (column, 10px);
+                    width: 100%;
+                    font-size: .8rem;
+                    list-style-type: none;
+                    text-align: left;
+
+                    &-li {
+                        @include flexDirection (row, 5px);
+                        align-items: center;
+
+                        .fa-solid {
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .third-section {
+        max-width: 100%;
+        background-color: #f1f1f1;
+    
+        &-all {
+            @include maxWidthSectionMobile;
+    
+            &-content{
+                @include maxWidthContentMobile;
+                @include flexDirection (column, 20px);
+    
+                h1 {
+                    @include h1Textmobile;
+                }
+        
+                p {
+                    @include pTextmobile;
+                }
+        
+                h3 {
+                    @include h3Textmobile;
+                }
+    
+                &-products {
+                    display: flex;
+                    
+                    &-ul {
+                        @include flexDirection (column, 10px);
+                        width: 100%;
+                        font-size: .8rem;
+                        list-style-type: none;
+                        text-align: left;
+    
+                        &-li {
+                            @include flexDirection (row, 5px);
+                            align-items: center;
+    
+                            .fa-solid {
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

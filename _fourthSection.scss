@@ -1,0 +1,107 @@
+.fourth-section {
+    @include maxWidthSection;
+
+    &-all {
+        @include maxWidthContent;
+
+        h1 {
+            @include h1Text;
+        }
+
+        &-container {
+            @include flexDirection (row, 20px);
+            flex-wrap: wrap;
+            
+            &-content {
+                @include flexDirection (column, 20px);
+                justify-content: center;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                border-radius: 20px;
+                transition: .5s;
+                cursor: pointer;
+
+                margin: 30px auto;
+                padding: 15px;
+                width: 220px;
+                height: 280px;
+
+                align-items: left;
+
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                }
+
+                img {
+                    width: 30px;
+                }
+
+                h3 {
+                    @include h3Text;
+                    text-align: left;
+                }
+
+                p {
+                    @include pText;
+                    text-align: left;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .fourth-section {
+        @include maxWidthSectionMobile;
+    
+        &-all {
+            @include maxWidthContentMobile;
+    
+            h1 {
+                @include h1Textmobile;
+            }
+    
+            &-container {
+                @include flexDirection (row, 20px);
+                flex-wrap: wrap;
+                
+                &-content {
+                    @include flexDirection (column, 20px);
+                    justify-content: center;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                    border-radius: 20px;
+                    transition: .5s;
+                    cursor: pointer;
+    
+                    margin: 30px auto;
+                    padding: 15px;
+                    width: 220px;
+                    height: 280px;
+    
+                    align-items: left;
+    
+                    &:hover {
+                        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                    }
+    
+                    img {
+                        width: 30px;
+                    }
+    
+                    h3 {
+                        @include h3Text;
+                        text-align: left;
+                    }
+    
+                    p {
+                        @include pText;
+                        text-align: left;
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+}

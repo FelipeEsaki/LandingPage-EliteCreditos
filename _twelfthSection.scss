@@ -1,0 +1,56 @@
+.twelfth-section {
+    max-width: 100%;
+    height: 400px;
+    background-color: #f1f1f1;
+
+    &-all {
+        @include maxWidthSection;
+
+        &-content {
+            @include maxWidthContent;
+            @include flexDirection (column, 20px);
+
+            h2 {
+                @include h2Text;
+            }
+
+            h1 {
+                @include h1Text;
+            }
+
+            p {
+                @include pText;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .twelfth-section {
+        max-width: 100%;
+        height: 400px;
+        background-color: #f1f1f1;
+    
+        &-all {
+            @include maxWidthSectionMobile;
+    
+            &-content {
+                @include maxWidthContentMobile;
+                @include flexDirection (column, 20px);
+    
+                h2 {
+                    @include h2Textmobile;
+                }
+    
+                h1 {
+                    @include h1Textmobile;
+                }
+    
+                p {
+                    @include pTextmobile;
+                }
+            }
+        }
+    }
+}

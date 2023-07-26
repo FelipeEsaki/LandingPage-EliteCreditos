@@ -1,0 +1,52 @@
+.eleventh-section {
+    @include maxWidthSection;
+
+    &-all {
+        @include flexDirection (column, 20px);
+        @include maxWidthContent;
+
+        h2 {
+            @include h2Text;
+        }
+
+        h1 {
+            @include h1Text;
+        }
+
+        p {
+            @include pText;
+        }
+
+        h3 {
+            @include h3Text;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .eleventh-section {
+        @include maxWidthSectionMobile;
+    
+        &-all {
+            @include flexDirection (column, 20px);
+            @include maxWidthContentMobile;
+    
+            h2 {
+                @include h2Textmobile;
+            }
+    
+            h1 {
+                @include h1Textmobile;
+            }
+    
+            p {
+                @include pTextmobile;
+            }
+    
+            h3 {
+                @include h3Textmobile;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.second-section {
+    @include maxWidthSection;
+
+    &-content {
+        @include maxWidthContent;
+        @include flexDirection (column, 20px);
+
+        h2 {
+            @include h2Text;
+        }
+
+        h1 {
+            @include h1Text;
+        }
+
+        h3 {
+            @include h3Text;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .second-section {
+        @include maxWidthSectionMobile;
+    
+        &-content {
+            @include maxWidthContent;
+            @include flexDirection (column, 20px);
+    
+            h2 {
+                @include h2Text;
+            }
+    
+            h1 {
+                @include h1Textmobile;
+            }
+    
+            h3 {
+                @include h3Textmobile;
+            }
+        }
+    }
+}
